@@ -1,0 +1,49 @@
+AI Image Generator
+Overview
+The AI Image Generator is a Django-based web application that integrates with an image generation API to create and manage images based on user-provided prompts. The application includes endpoints for generating images, retrieving generated images, and managing the results.
+
+AI/
+├── images/               ---->Django app
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── tasks.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│       
+├── src/                  ------>Django project
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├── manage.py
+├── pytest.ini
+└── requirements.txt
+
+
+Prerequisites
+        Python 3.10 or higher
+        Django 4.x
+        Celery
+        Redis (or another message broker for Celery)
+        pytest
+        pytest-html
+
+
+
+-------------------------  Install and intergrate ----------------------
+
+git clone <repository-url>
+cd AI
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+pip install pytest pytest-html
+pytest --html=report.html --self-contained-html
