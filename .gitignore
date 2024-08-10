@@ -1,0 +1,5 @@
+dump.rdb
+__pycache__
+migrations
+venv
+nurse_images/
