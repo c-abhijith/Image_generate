@@ -15,3 +15,5 @@ run-local:
 	python manage.py runserver 8000
 
 
+test:
+    pytest --html=report.html --self-contained-html
