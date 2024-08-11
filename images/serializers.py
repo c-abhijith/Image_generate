@@ -7,7 +7,7 @@ class GeneratedImageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = GeneratedImage
-        fields = ['id', 'task_id', 'image', 'prompt']
+        fields = ['id', 'task_id','image_url','image', 'prompt']
 
     def get_image_url(self, obj):
         request = self.context.get('request')
