@@ -16,4 +16,4 @@ run-local:
 
 
 test:
-    pytest --html=report.html --self-contained-html
+    python manage.py test

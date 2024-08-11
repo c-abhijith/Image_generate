@@ -16,7 +16,8 @@ Terminal 3: Start Celery Worker
 
 
 Test_case: 
-                
+                make test
+
 
 
 

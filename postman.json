@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "d4d6b4a1-f837-4e1b-84c7-d9651614b4e9",
+		"name": "Image_generate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "19982398",
+		"_collection_link": "https://orange-eclipse-887429.postman.co/workspace/946e5419-f0a1-4509-8221-995adc670dd9/collection/19982398-d4d6b4a1-f837-4e1b-84c7-d9651614b4e9?action=share&source=collection_link&creator=19982398"
+	},
+	"item": [
+		{
+			"name": "generate_image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prompts\": [\n        \"The drog drive train\",\n        \"the lion manage traffic\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/generate-images/"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"prompts\": [\n        \"The drog drive train\",\n        \"the lion manage traffic\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/api/generate-images/"
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 04:33:51 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        \"98bd5053-e45d-4937-9192-382771b204c8\",\n        \"a3a2e223-ad6a-43fc-9096-d9e5465af870\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "view records",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/generate-images/"
+			},
+			"response": [
+				{
+					"name": "view records",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/generate-images/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 04:36:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "731"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"282db6d2-5b95-4cdb-bb77-bbe34f2ca448\",\n            \"task_id\": \"c708d09a-aa8b-4bc9-9591-eb97ca3adc6b\",\n            \"image_url\": \"http://127.0.0.1:8000/media/media/images/generated_image_91935185-0294-452a-9a3e-d2652c285119.jpg\",\n            \"image\": \"http://127.0.0.1:8000/media/media/images/generated_image_91935185-0294-452a-9a3e-d2652c285119.jpg\",\n            \"prompt\": \"the scating boad raiding\"\n        },\n        {\n            \"id\": \"cf5c1805-838a-4e87-ad0c-cdf22f8cdd96\",\n            \"task_id\": \"46464b2d-f881-4358-baef-14bafc9f7e47\",\n            \"image_url\": \"http://127.0.0.1:8000/media/media/images/generated_image_2e8695da-2eca-49ef-86a0-655169f46bec.jpg\",\n            \"image\": \"http://127.0.0.1:8000/media/media/images/generated_image_2e8695da-2eca-49ef-86a0-655169f46bec.jpg\",\n            \"prompt\": \"the scating boad raiding\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "view records",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/api/generate-images/"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 11 Aug 2024 04:36:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.12.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "731"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": \"282db6d2-5b95-4cdb-bb77-bbe34f2ca448\",\n            \"task_id\": \"c708d09a-aa8b-4bc9-9591-eb97ca3adc6b\",\n            \"image_url\": \"http://127.0.0.1:8000/media/media/images/generated_image_91935185-0294-452a-9a3e-d2652c285119.jpg\",\n            \"image\": \"http://127.0.0.1:8000/media/media/images/generated_image_91935185-0294-452a-9a3e-d2652c285119.jpg\",\n            \"prompt\": \"the scating boad raiding\"\n        },\n        {\n            \"id\": \"cf5c1805-838a-4e87-ad0c-cdf22f8cdd96\",\n            \"task_id\": \"46464b2d-f881-4358-baef-14bafc9f7e47\",\n            \"image_url\": \"http://127.0.0.1:8000/media/media/images/generated_image_2e8695da-2eca-49ef-86a0-655169f46bec.jpg\",\n            \"image\": \"http://127.0.0.1:8000/media/media/images/generated_image_2e8695da-2eca-49ef-86a0-655169f46bec.jpg\",\n            \"prompt\": \"the scating boad raiding\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
